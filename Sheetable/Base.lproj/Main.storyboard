@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="tJ9-nx-fsm">
+    <device id="retina6_1" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Navigation Controller-->
+        <scene sceneID="kvS-eZ-Twg">
+            <objects>
+                <navigationController id="tJ9-nx-fsm" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="7Ld-Z4-rAs">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="uWE-lu-x6u" kind="relationship" relationship="rootViewController" id="eOf-Kk-zbm"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="yAP-iY-d5n" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-370" y="304"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="Ui3-EO-7UD">
+            <objects>
+                <viewController id="uWE-lu-x6u" customClass="ViewController" customModule="Sheetable" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Kwj-ga-H8P" customClass="ViewC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sZN-Gf-8wX">
+                                <rect key="frame" x="111" y="460" width="192" height="30"/>
+                                <state key="normal" title="Present Modal as Sheetable"/>
+                                <connections>
+                                    <segue destination="GMc-T3-kw4" kind="presentation" identifier="" id="2Yk-J1-UXh"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="sZN-Gf-8wX" firstAttribute="centerX" secondItem="nzx-LO-zLD" secondAttribute="centerX" id="VCD-mF-HAB"/>
+                            <constraint firstItem="sZN-Gf-8wX" firstAttribute="centerY" secondItem="nzx-LO-zLD" secondAttribute="centerY" id="dvr-PK-Kth"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="nzx-LO-zLD"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="MJY-ou-0xZ"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="rxJ-Eh-8aP" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="445" y="303"/>
+        </scene>
+        <!--Another View Controller-->
+        <scene sceneID="zOw-G8-Rr2">
+            <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="AOy-jh-QxM" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <viewController storyboardIdentifier="another" id="GMc-T3-kw4" customClass="AnotherViewController" customModule="Sheetable" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="pfL-OL-D7O">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7km-b2-OgG">
+                                <rect key="frame" x="20" y="64" width="374" height="264"/>
+                                <mutableString key="text">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</mutableString>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="7km-b2-OgG" firstAttribute="trailing" secondItem="BK6-6E-SRi" secondAttribute="trailing" constant="-20" id="btv-ME-ibw"/>
+                            <constraint firstItem="7km-b2-OgG" firstAttribute="top" secondItem="BK6-6E-SRi" secondAttribute="top" constant="20" id="mcu-Cl-v2J"/>
+                            <constraint firstItem="7km-b2-OgG" firstAttribute="leading" secondItem="BK6-6E-SRi" secondAttribute="leading" constant="20" id="noB-Dk-M0b"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="BK6-6E-SRi"/>
+                    </view>
+                </viewController>
+            </objects>
+            <point key="canvasLocation" x="1272" y="303"/>
+        </scene>
+    </scenes>
+</document>
